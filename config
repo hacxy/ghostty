@@ -11,7 +11,7 @@ font-thicken = false
 # ---------- 窗口 ----------
 window-padding-x = 5
 window-padding-y = 5
-background-opacity = 0.90
+background-opacity = 0.85
 background-blur = 64
 window-save-state = never
 macos-titlebar-style = tabs
