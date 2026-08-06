@@ -12,7 +12,7 @@ font-thicken = false
 window-padding-x = 5
 window-padding-y = 5
 background-opacity = 0.85
-background-blur = 64
+background-blur = 30
 window-save-state = never
 macos-titlebar-style = tabs
 window-decoration = auto
@@ -32,6 +32,103 @@ theme = Atom One Dark
 
 # ---------- 快捷键映射 ----------
 
+keybind = clear
 # 兼容 nvim 键位: Ctrl+` → Ctrl+_
 keybind = ctrl+grave_accent=text:\x1f
+
+
+# ---------- Vim 风格分屏 ----------
+
+# 新建分屏 (vim: :vsplit / :split)
+# 垂直分屏(右)
+keybind = cmd+r=new_split:right
+# 水平分屏(下)
+keybind = cmd+d=new_split:down
+# 垂直分屏(左)
+keybind = cmd+shift+r=new_split:left
+# 水平分屏(上)
+keybind = cmd+shift+d=new_split:up
+
+# 分屏间导航 (vim h/j/k/l)
+keybind = cmd+h=goto_split:left
+keybind = cmd+j=goto_split:down
+keybind = cmd+k=goto_split:up
+keybind = cmd+l=goto_split:right
+keybind = cmd+[=goto_split:previous
+keybind = cmd+]=goto_split:next
+
+# 调整分屏宽高 (Shift+方向, 步长 20 格, 改数字可调)
+keybind = cmd+shift+h=resize_split:left,20
+keybind = cmd+shift+j=resize_split:down,20
+keybind = cmd+shift+k=resize_split:up,20
+keybind = cmd+shift+l=resize_split:right,20
+
+# 均分所有分屏 (实际按 Cmd+Alt+Shift+=)
+keybind = cmd+e=equalize_splits
+
+# 放大/还原当前分屏
+keybind = cmd+enter=toggle_split_zoom
+
+# 关闭当前分屏
+keybind = cmd+x=close_surface
+
+# ---------- Vim 风格标签页 ----------
+keybind = cmd+t=new_tab
+
+# ⌘+数字 → 跳转到指定标签页 (goto_tab 从 1 开始)
+keybind = cmd+1=goto_tab:1
+keybind = cmd+2=goto_tab:2
+keybind = cmd+3=goto_tab:3
+keybind = cmd+4=goto_tab:4
+keybind = cmd+5=goto_tab:5
+keybind = cmd+6=goto_tab:6
+keybind = cmd+7=goto_tab:7
+keybind = cmd+8=goto_tab:8
+keybind = cmd+9=goto_tab:9
+
+keybind = cmd+ctrl+l=next_tab
+keybind = cmd+ctrl+h=previous_tab
+
+
+# ---------- Vim 风格滚动 ----------
+   # 向上半页 (vim ctrl+u)
+keybind = cmd+u=scroll_page_fractional:-0.5
+# 向下半页 (vim ctrl+d; 用 shift+u 避开 macOS 显示/隐藏 Dock 的 cmd+alt+d)
+keybind = cmd+shift+u=scroll_page_fractional:0.5
+# 向上/下 5 行 (vim ctrl+y / ctrl+e)
+keybind = cmd+ctrl+k=scroll_page_lines:-5
+keybind = cmd+ctrl+j=scroll_page_lines:5
+
+# 整页 (vim ctrl+b / ctrl+f)
+keybind = cmd+b=scroll_page_fractional:-1
+keybind = cmd+f=scroll_page_fractional:1
+
+# 顶部/底部 (vim gg / G)
+keybind = cmd+g=scroll_to_top
+keybind = cmd+shift+g=scroll_to_bottom
+
+
+# 默认键位
+# ⌘⇧, → 重载配置
+keybind = cmd+shift+,=reload_config
+# ⌘, → 打开配置文件（相关项）
+keybind = cmd+,=open_config
+# ⌘= → 放大字号
+keybind = cmd+==increase_font_size:1
+# ⌘+ → 放大字号（第二入口）
+keybind = cmd++=increase_font_size:1
+# ⌘- → 缩小字号
+keybind = cmd+-=decrease_font_size:1
+# ⌘Q → 退出
+keybind = super+q=quit
+# 键盘上的 Copy 键（如有）
+keybind = copy=copy_to_clipboard:mixed
+# 键盘上的 Paste 键（如有）
+keybind = paste=paste_from_clipboard
+# ⌘C → 复制
+keybind = cmd+c=copy_to_clipboard:mixed
+# ⌘V → 粘贴
+keybind = cmd+v=paste_from_clipboard
+# ⌘⇧V → 粘贴主选择
+keybind = cmd+shift+v=paste_from_selection
 
