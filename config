@@ -23,7 +23,7 @@ mouse-hide-while-typing = true
 macos-option-as-alt = true
 
 # ---------- 主题 (Catppuccin Mocha) ----------
-theme = Catppuccin Mocha
+# theme = Catppuccin Mocha
 
 # ---------- 快捷键映射 ----------
 
