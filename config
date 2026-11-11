@@ -1,5 +1,8 @@
 # ---------- 字体 ----------
+# 主字体（不含中文字形）
 font-family = JetBrainsMono Nerd Font
+# 中文回退字体：统一走苹方，避免系统随机回退导致字号不一
+font-family = PingFang SC
 font-size = 24.0
 font-thicken = false
 
@@ -15,7 +18,7 @@ window-decoration = auto
 window-padding-x = 0
 window-padding-y = 0
 
-adjust-cell-width = +0
+adjust-cell-width = 0
 adjust-cell-height = 0
 
 
@@ -30,7 +33,7 @@ mouse-hide-while-typing = true
 macos-option-as-alt = true
 
 # ---------- 主题 (Catppuccin Mocha) ----------
-# theme = Catppuccin Mocha
+theme = Catppuccin Mocha
 
 # ---------- 快捷键映射 ----------
 
